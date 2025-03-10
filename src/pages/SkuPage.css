@@ -1,0 +1,141 @@
+/* src/pages/SkuPage.css */
+
+/* Container for the SKU page */
+.sku-page {
+  position: relative;
+  min-height: 100%;
+  padding: 1rem;
+  padding-bottom: 80px; /* space for the bottom bar */
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* Page title */
+.page-title {
+  margin-bottom: 1rem;
+}
+
+/* Table styles */
+.sku-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.sku-table thead {
+  background-color: #f2f2f2;
+}
+
+.sku-table th,
+.sku-table td {
+  text-align: left;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+}
+
+.sku-table th {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Actions column */
+.actions-col {
+  text-align: center;
+  width: 120px; /* or however wide you want */
+}
+
+/* Inline edit inputs */
+.sku-table input {
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 0.9rem;
+}
+
+/* Icon styles */
+.icon-button {
+  cursor: pointer;
+  margin: 0 0.25rem;
+  font-size: 1rem;
+  color: #777;
+  transition: color 0.2s ease;
+}
+
+.icon-button:hover {
+  color: #333;
+}
+
+.edit-icon {
+  color: #007bff;
+}
+
+.delete-icon {
+  color: #ff5e00;
+}
+
+.save-icon {
+  color: green;
+}
+
+.cancel-icon {
+  color: red;
+}
+
+/* Form for adding new SKUs */
+.sku-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.sku-form input {
+  flex: 1;
+  min-width: 120px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-sku-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.add-sku-button:hover {
+  background-color: #0056b3;
+}
+
+/* Bottom bar with "NEW SKU" button */
+.new-sku-bar {
+  position: fixed;
+  bottom: 0;
+  left: 200px; /* adjust if your side nav is wider */
+  right: 0;
+  height: 60px;
+  background-color: #ff5e00;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+.new-sku-btn {
+  border: none;
+  background: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.new-sku-btn:hover {
+  opacity: 0.8;
+}

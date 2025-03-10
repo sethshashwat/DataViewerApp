@@ -1,0 +1,134 @@
+/* Container for the entire page */
+.store-page {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Page title */
+  .page-title {
+    margin-bottom: 1rem;
+  }
+  
+  /* Table styles */
+  .store-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .store-table thead {
+    background-color: #f2f2f2;
+  }
+  
+  .store-table th,
+  .store-table td {
+    text-align: left;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+  }
+  
+  .store-table th {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Form for adding new stores */
+  .store-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .store-form input {
+    flex: 1;
+    min-width: 120px;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .store-form button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .store-form button:hover {
+    background-color: #0056b3;
+  }
+
+  .actions-col {
+    text-align: center;
+  }
+  
+  /* Delete icon styling */
+  .delete-icon {
+    cursor: pointer;
+    color: #777;
+    transition: color 0.2s ease;
+    font-size: 1rem; /* Adjust as needed */
+  }
+  
+  .delete-icon:hover {
+    color: #333;
+  }
+
+  .icon-button {
+    cursor: pointer;
+    margin: 0 0.25rem;
+    font-size: 1rem;
+    color: #777;
+    transition: color 0.2s ease;
+  }
+  
+  .icon-button:hover {
+    color: #333;
+  }
+  
+  .save-icon {
+    color: green;
+  }
+  
+  .cancel-icon {
+    color: red;
+  }
+  
+  .edit-icon {
+    color: #007bff;
+  }
+  
+  .delete-icon {
+    color: #ff5e00;
+  }
+  
+  /* Center the actions column if desired */
+  .actions-col {
+    text-align: center;
+    width: 100px; /* or however wide you want this column */
+  }
+  
+  .move-icon {
+    margin: 0 0.25rem;
+    font-size: 1rem;
+    color: #777;
+    cursor: pointer;
+  }
+  
+  .move-icon:hover {
+    color: #333;
+  }
+  
+  /* Disable icon when at top/bottom */
+  .disabled-icon {
+    opacity: 0.3;
+    pointer-events: none;
+  }

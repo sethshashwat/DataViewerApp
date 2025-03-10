@@ -1,54 +1,69 @@
-# React + TypeScript + Vite
+# Data Viewer App - README
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live Demo:- https://dataviewerapp.onrender.com/
 
-Currently, two official plugins are available:
+Video Tutorial:- https://www.youtube.com/watch?v=fiWxmCrM2Ng
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## A. Instructions for Running and Testing
 
-## Expanding the ESLint configuration
+1. ** Install Dependencies **  
+   ```bash
+   npm install
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+2. ** Run in Development **
+   ```bash
+   npm start
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+3. ** Build for Production **
+   ```bash
+   npm run build
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+4. ** Test **
+   Currently, there are no automated tests configured.
+   If tests were included (e.g., Jest or React Testing Library), you would run them via:
+   ```bash
+   npm test
+  For now, you can manually verify the features by launching the app and interacting with the Store, SKU, Planning, and Chart pages.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Challenge Elements Done Well:-
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+1. React + Redux Structure
+
+- The application uses React with Redux for state management.
+- I organized the slices (stores, skus, planning) in a way that keeps data flows clean and consistent.
+
+2. Pivoting and Aggregation Logic
+
+- Implemented a pivot function that cross-joins raw planning data with SKU data to compute Sales Dollars, GM Dollars, and GM %.
+- This logic shows an ability to handle transformations and computations in a maintainable way.
+  
+3. Dynamic AG Grid Configuration
+
+- The Planning screen builds column groups by months/weeks, leveraging AG Grid for advanced features like conditional styling, grouping, and editing.
+- This demonstrates proficiency in AG Grid usage and dynamic column definitions.
+  
+4. Chart Page (Dual-Axis Bar/Line)
+
+- A Recharts-based dual-axis chart aggregates GM Dollars and Sales Dollars, then calculates GM % for a selected store.
+- This highlights front-end data visualization skills and the ability to handle user interactions (selecting a store).
+  
+These elements demonstrate proficiency because they tackle both data transformation (pivoting, aggregation) and UI complexity (grouped columns, dynamic charting) while maintaining a clean structure in Redux and React.
+
+Potential Improvements (With 4 More Hours):- 
+
+1. Unit & Integration Tests
+
+- Implement Jest or React Testing Library tests for key components (Store, SKU, Planning) and for pivot logic.
+- Ensures reliability and demonstrates a test-driven mindset.
+  
+2. More Robust Error Handling & Logging
+
+- Add user-friendly error messages if data import fails or if a calculation encounters unexpected values.
+- Log warnings and errors to the console or a logging service for debugging in production.
+  
+3. Improved UI/UX
+
+- Use a polished component library (e.g., Material UI) for more consistent styling, tooltips, and user feedback.
+- Make the AG Grid fully responsive for smaller screens and refine the chart’s tooltips/legend for clarity.
+  
+I would do these improvements to strengthen the application’s reliability, maintainability, and user experience, which are key aspects in production-ready software.

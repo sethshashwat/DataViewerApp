@@ -6,7 +6,7 @@ import Layout from "./layout/Layout";
 import StorePage from "./pages/StorePage";
 import SkuPage from "./pages/SkuPage";
 import PlanningPage from "./pages/PlanningPage";
-import ChartPage from "./pages/Chartpage";
+import ChartPage from "./pages/ChartPage";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 const App: React.FC = () => {
